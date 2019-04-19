@@ -1,0 +1,54 @@
+/*Project Details*/
+      
+        .project-details-title h4 {
+        font-size:  32px;
+        font-weight:  600;
+        text-transform:  uppercase;
+        }
+
+        .project-details-title h6 {
+        font-size: 18px;
+        color: #fc6f5c;
+        }
+
+        .project-details-table {
+         margin: 10px 15px 0px 15px;
+        }
+
+        .project-details-table table tr {
+        /* margin-bottom: 30px; */
+        padding-bottom: 10px;
+        }
+
+        .project-details-table table td {
+        padding-bottom: 10px;
+        }
+
+        .project-details-table td span {
+        padding-right: 10px;
+        font-weight: 600;
+        }
+        .project-img img {
+        height: 450px;
+        }
+        .project-img img {
+        height: 475px;
+        }
+
+        .project-features {
+          margin: 10px 15px 0px 15px;
+        }
+
+        .project-features ul li i {
+        color: #fc6f5c;
+        }
+
+        .project-features ul li {
+        font-weight: 500;
+        }
+        .project-description p {
+        margin-bottom: 0;
+        }
+        .project-description {
+            margin-top: 15px;
+        }

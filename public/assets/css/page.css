@@ -1,0 +1,96 @@
+.arrow {
+    position: absolute;
+    bottom: 20vh;
+    width: 100vw;
+    left: 0;
+    z-index: 11;
+    text-align: center;
+    padding-left: 0px;
+}
+.banner-div {
+    top: 50%;
+    left: 0px;
+    position: absolute;
+    color: #fff;
+    z-index: 11;
+    text-align: center;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.page-text {
+    text-align: center;
+    margin-top: 25px;
+}
+.page-text h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+a.page-div:hover {
+    -webkit-box-shadow: 0 0 40px rgba(0,0,0,.3);
+    box-shadow: 0 0 40px rgba(0,0,0,.3);
+}
+.demo-image-section {
+    position: relative;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.2);
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.demo-image-section .thumb img {
+    border-radius: 5px;
+}
+.demo-image-section:hover .img-hover {
+    visibility: visible;
+    opacity: 1;
+}
+.demo-image-section .img-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #7471FE 0%, rgba(64, 60, 255, .7) 0%, rgba(65, 61, 255, .7) 100%) repeat scroll 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 5px;
+}
+.img-hover-inner {
+    text-align: center;
+}
+
+.img-hover-inner a {
+    background: red;
+    color: #fff;
+    background: #1fcae8;
+    padding: 8px 15px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: inline-table;
+    line-height: 28px;
+    font-weight: 600;
+    background: #ffffff;
+    color: #504dfd;
+    text-decoration: none;
+    transition: all .5s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+}
+
+.img-hover-inner h2 {
+    color: #fff;
+}
