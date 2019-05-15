@@ -1491,6 +1491,7 @@ ul.about-app-text-item li {
 .page-title-top {
     font-size: 60px !important;
     line-height: 1.17 !important;
+    margin-bottom: 25px;
 }
 
 .bg-title p {

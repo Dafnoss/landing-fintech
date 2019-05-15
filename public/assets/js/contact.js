@@ -1,5 +1,13 @@
 $(document).ready(function() {
     "use strict";
+    function triggerTag () {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'formSubmission', //you can actually name this even whatever you want
+            'formID': 'contact-form'
+        });
+    }
+
     $('form#contact-form').submit(function() {
         $('form#contact-form .error').remove();
         var hasError = false;
@@ -40,6 +48,8 @@ $(document).ready(function() {
                     })
                 }
             });
+
+            triggerTag();
 
             return false;
         }
