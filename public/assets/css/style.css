@@ -3064,7 +3064,7 @@ Contact map section
      flex-direction: row;
      flex-shrink: 0;
      justify-content: center;
-     margin-bottom: 70px;
+     margin-bottom: 50px;
  }
 
 
@@ -3072,7 +3072,6 @@ Contact map section
      display: flex;
      flex-direction: row;
      position: relative;
-     border: 2px solid red;
      width: 50%;
      align-items: center;
      justify-content: center;
@@ -3204,11 +3203,35 @@ Contact map section
     }
 
     .contact-item {
+        flex-direction: column;
         width: 100%;
+    }
+
+    .contact-item_container {
+        text-align: center;
+    }
+
+    .contact-item_icon {
+        margin-right: 0px;
+        text-align: right;
     }
 
     a.navbar-brand {
         margin-left: 15px;
+    }
+
+    .contact-item_icon img {
+        height: 70px ;
+        width: 70px;
+        margin-bottom: 20px;
+    }
+
+    .contact-item:first-child {
+        margin-bottom: 30px;
+    }
+
+    .contact-items {
+        margin-bottom: 30px;
     }
 
     .feature-item-text {
@@ -3746,10 +3769,6 @@ Contact map section
      .short-container {
          width: 100%;
      }
-
-     .map-item_container {
-         width: 90%;
-     }
  }
 
  @media (min-width: 460px) {
@@ -3765,9 +3784,5 @@ Contact map section
      .secondary-menu {
          padding-left: 0px;
          padding-right: 0px;
-     }
-
-     .map-item_container {
-         width: 90%;
      }
  }
