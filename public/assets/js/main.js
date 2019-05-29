@@ -55,13 +55,14 @@
 
         }
 
-        if (/*$(window).navigator.appCodeName === "Safari" && */ $(window).width() < 460) {
+        /* Changing palalax to static img on iphone and iPad, because paralax is not supported there
+  -------------------------------------------------------*/
+
+        if ((window.navigator.platform === "iPhone" || window.navigator.platform === "iPad") && $(window).width() < 461) {
             const paralaxes = document.querySelectorAll('.paralax-on');
             const allParalaxes = Array.from(paralaxes);
-            console.log(allParalaxes);
             allParalaxes.forEach((element) => {
                 element.style.backgroundAttachment = 'scroll';
-                console.log(element.style.backgroundAttachment)
             })
         }
 
