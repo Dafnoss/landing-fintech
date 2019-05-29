@@ -55,6 +55,16 @@
 
         }
 
+        if (/*$(window).navigator.appCodeName === "Safari" && */ $(window).width() < 460) {
+            const paralaxes = document.querySelectorAll('.paralax-on');
+            const allParalaxes = Array.from(paralaxes);
+            console.log(allParalaxes);
+            allParalaxes.forEach((element) => {
+                element.style.backgroundAttachment = 'scroll';
+                console.log(element.style.backgroundAttachment)
+            })
+        }
+
  /* Clients Testimonials
   -------------------------------------------------------*/
         $("#c-caro").owlCarousel({
