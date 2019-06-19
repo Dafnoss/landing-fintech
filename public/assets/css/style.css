@@ -2216,7 +2216,15 @@ a#contact-submit {
 
  .contact-form-container h2 {
      color: rgb(74, 69, 69);
+     margin-bottom: 10px;
  }
+
+ .contact-form-sup-text {
+     text-align: center;
+     margin-bottom: 20px;
+ }
+
+
 
  .error {
      color: red;
