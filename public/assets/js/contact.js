@@ -32,6 +32,8 @@ $(document).ready(function() {
                 $(this).parent().append('');
             });
 
+            document.querySelector('.contact-form-sup-text').classList.add('hide-it');
+
             $("#loader").show();
             $.ajax({
                 url: "assets/contact/contact.php",
