@@ -8,6 +8,11 @@ const inputName = form.querySelector('#first-name');
 const inputEmail = form.querySelector('#email');
 const inputMessage = form.querySelector('#description');
 const inputPhone = form.querySelector('#phone-number');
+var leadCountry = 'cant get country';
+
+jQuery.get("https://ipinfo.io?token=e05c644913464f", function(response) {
+    leadCountry = response.country;
+}, "jsonp");
 
 //config your firebase push
 var config = {
@@ -20,7 +25,7 @@ var config = {
 };
 
 //create a functions to push
-function firebasePush(name, email, phone, message) {
+function firebasePush(name, email, phone, message, country) {
 
     //prevents from braking
     if (!firebase.apps.length) {
@@ -33,7 +38,8 @@ function firebasePush(name, email, phone, message) {
             name: name.value,
             mail: email.value,
             phone: phone.value,
-            message: message.value
+            message: message.value,
+            country: country
         }
     );
 }
@@ -48,7 +54,7 @@ if (form) {
         var emailValid = emailReg.test(jQuery.trim($(inputEmail).val()));
 
         if(inputName.value && emailValid) {
-        firebasePush(inputName, inputEmail, inputPhone, inputMessage);
+        firebasePush(inputName, inputEmail, inputPhone, inputMessage, leadCountry);
 
         //shows alert if everything went well.
         //return alert('Data Successfully Sent to Realtime Database');

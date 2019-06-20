@@ -37,9 +37,10 @@ var goMail = function (lead) {
             '<b>Request details:</b>' + '<br>' +
             '<br>' +
             'Name: ' + lead.name + '<br>' +
-            ' From: ' + lead.mail + '<br>' +
-            ' Phone: ' + lead.phone + '<br>' +
-            'Message: ' + lead.message +
+            'From: ' + lead.mail + '<br>' +
+            'Phone: ' + lead.phone + '<br>' +
+            'Message: ' + lead.message + '<br>' +
+            'Country: ' + lead.country +
             '<br>' +
             '<br>' +
             'Sent from the page: https://fintech.azoft.com/'
@@ -64,7 +65,7 @@ var goTelegram = function (lead) {
 
     const bot = new telegraf.Telegram(functions.config().bot.token);
     return bot.sendMessage(functions.config().bot.chat,
-         '!' + lead.name + ' send you a message from: ' + lead.mail + ' and his phone number is: ' + lead.phone + '. ' + 'Message: ' + lead.message // plain text body
+         '!' + lead.name + ' send you a message from: ' + lead.mail + ' and his phone number is: ' + lead.phone + ' Country: ' + lead.country + ' Message: ' + lead.message // plain text body
     );
 };
 

@@ -32,7 +32,7 @@ $(document).ready(function() {
                 $(this).parent().append('');
             });
 
-            document.querySelector('.contact-form-sup-text').classList.add('hide-it');
+            //document.querySelector('.contact-form-sup-text').classList.add('hide-it');
 
             $("#loader").show();
             $.ajax({
@@ -47,6 +47,7 @@ $(document).ready(function() {
                         $(this).before('<div class="success">Thank you. Your Email was sent successfully.<br> We will contact you within 24 hours.</div>' +
                             '<div class="col-md-12 text-center"> <a id="contact-submit" href="https://www.azoft.com/blog/" class="div-btn success-button">Take a look at Our Blog</a> </div>')
                         $("#loader").hide();
+                        document.querySelector('.contact-form-sup-text').classList.add('hide-it');
                     })
                 }
             });
