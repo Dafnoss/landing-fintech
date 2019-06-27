@@ -9,12 +9,15 @@ const telegraf = require('telegraf');
 const gmailEmail = functions.config().gmail.login;
 const gmailPassword = functions.config().gmail.pass;
 
+const azoftLogin = functions.config().azoft.login;
+const azoftPass = functions.config().azoft.pass;
+
 admin.initializeApp();
 
 //creating function for sending emails
 var goMail = function (lead) {
 
-//transporter is a way to send your emails
+/* /transporter is a way to send your emails
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -23,10 +26,27 @@ var goMail = function (lead) {
         }
     });
 
+*/
+
+    const transporter = nodemailer.createTransport({
+        host: 'mail.azoft.com',
+        port: 465,
+        secure: true,
+        auth: {
+            user: azoftLogin,
+            pass: azoftPass
+        },
+        tls: {
+            // do not fail on invalid certs
+            rejectUnauthorized: false
+        }
+    });
+
+
     // setup email data with unicode symbols
     //this is how your email are going to look like
     const mailOptions = {
-        from: gmailEmail, // sender address
+        from: lead.mail, // sender address
         to: 'info@azoft.com', // list of receivers
         subject: 'New Lead from Fintech Landing', // Subject line
         //text: '! ' + lead.name + ' send you a message from: ' + lead.mail + '. ' + 'Message: ' + lead.message // plain text body
