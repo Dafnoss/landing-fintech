@@ -11,7 +11,7 @@
   "dependencies": {
     "firebase-admin": "~7.0.0",
     "firebase-functions": "^2.2.0",
-    "nodemailer": "^4.6.5",
+    "nodemailer": "^6.4.16",
     "telegraf": "^3.27.1"
   },
   "private": true
